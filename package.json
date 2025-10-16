@@ -1,0 +1,22 @@
+{
+  "name": "swtframework",
+  "version": "0.1.0",
+  "description": "RageMP shrinking circle event framework",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "start": "node dist/index.js",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:generate": "prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.16.1"
+  },
+  "devDependencies": {
+    "prisma": "^5.16.1",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  }
+}

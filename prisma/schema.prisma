@@ -1,0 +1,48 @@
+// Prisma schema for swtframework
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Event {
+  id        Int           @id @default(autoincrement())
+  name      String
+  state     String
+  createdAt DateTime      @default(now())
+  endedAt   DateTime?
+  players   EventPlayer[]
+  results   EventResult[]
+}
+
+model EventPlayer {
+  id               Int      @id @default(autoincrement())
+  eventId          Int
+  playerIdentifier String
+  playerName       String
+  alive            Boolean  @default(true)
+  kills            Int      @default(0)
+  damageTaken      Int      @default(0)
+  lastInCircleAt   DateTime?
+  immunityUntil    DateTime?
+  joinedAt         DateTime @default(now())
+  leftAt           DateTime?
+  event            Event    @relation(fields: [eventId], references: [id])
+
+  @@unique([eventId, playerIdentifier])
+}
+
+model EventResult {
+  id               Int      @id @default(autoincrement())
+  eventId          Int
+  winnerIdentifier String
+  durationSeconds  Int
+  totalPlayers     Int
+  logPath          String?
+  createdAt        DateTime @default(now())
+  event            Event    @relation(fields: [eventId], references: [id])
+}
