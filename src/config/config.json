@@ -1,0 +1,10 @@
+{
+  "startRadius": 150.0,
+  "shrinkStep": 25.0,
+  "shrinkInterval": 60,
+  "damageOutsidePerSecond": 3,
+  "graceSeconds": 5,
+  "taskTimeout": 20,
+  "immunitySeconds": 10,
+  "center": { "x": 200.0, "y": 200.0, "z": 10.0 }
+}

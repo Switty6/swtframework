@@ -1,0 +1,93 @@
+{
+  "summary": {
+    "winner": "PlayerOne",
+    "winnerId": "playerone-12",
+    "durationSeconds": 325,
+    "initialPlayers": 10,
+    "lootCollected": [
+      {
+        "player": "PlayerThree",
+        "identifier": "playerthree-3",
+        "weapon": "weapon_bat",
+        "crateId": "crate-1",
+        "timestamp": "2024-05-01T20:00:25.000Z"
+      },
+      {
+        "player": "PlayerFive",
+        "identifier": "playerfive-5",
+        "weapon": "weapon_knuckle",
+        "crateId": "crate-2",
+        "timestamp": "2024-05-01T20:00:41.000Z"
+      }
+    ],
+    "checkpointClaims": [
+      {
+        "player": "PlayerTwo",
+        "identifier": "playertwo-2",
+        "immunitySeconds": 10,
+        "grantedPistol": false,
+        "timestamp": "2024-05-01T20:02:05.000Z"
+      },
+      {
+        "player": "PlayerFour",
+        "identifier": "playerfour-4",
+        "immunitySeconds": 10,
+        "grantedPistol": true,
+        "timestamp": "2024-05-01T20:03:15.000Z"
+      }
+    ],
+    "finalDrop": {
+      "player": "PlayerOne",
+      "identifier": "playerone-12",
+      "weapon": "weapon_rpg",
+      "timestamp": "2024-05-01T20:05:00.000Z"
+    }
+  },
+  "entries": [
+    {
+      "timestamp": "2024-05-01T20:00:00.000Z",
+      "type": "INIT",
+      "message": "Event created"
+    },
+    {
+      "timestamp": "2024-05-01T20:00:01.000Z",
+      "type": "LOOT_PHASE_START",
+      "message": "Loot phase has started with melee crates"
+    },
+    {
+      "timestamp": "2024-05-01T20:00:25.000Z",
+      "type": "LOOT_COLLECT",
+      "message": "PlayerThree collected weapon_bat from crate-1"
+    },
+    {
+      "timestamp": "2024-05-01T20:01:00.000Z",
+      "type": "CIRCLE_SHRINK",
+      "message": "Circle radius shrunk to 125"
+    },
+    {
+      "timestamp": "2024-05-01T20:03:30.000Z",
+      "type": "IMMUNITY",
+      "message": "PlayerTwo gained immunity for 10s"
+    },
+    {
+      "timestamp": "2024-05-01T20:04:30.000Z",
+      "type": "FINAL_DROP_SPAWN",
+      "message": "Final drop spawned with bazooka reward"
+    },
+    {
+      "timestamp": "2024-05-01T20:05:25.000Z",
+      "type": "ELIMINATED",
+      "message": "PlayerTen was eliminated"
+    },
+    {
+      "timestamp": "2024-05-01T20:05:26.000Z",
+      "type": "FINAL_DROP_CLAIM",
+      "message": "PlayerOne secured the final drop bazooka"
+    },
+    {
+      "timestamp": "2024-05-01T20:05:30.000Z",
+      "type": "WINNER",
+      "message": "PlayerOne won the event"
+    }
+  ]
+}
